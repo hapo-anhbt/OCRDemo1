@@ -4,7 +4,7 @@ import {StyleSheet, Text, View,TextInput, SafeAreaView,
      StatusBar,Button} from 'react-native';
 
     
-export default class Login extends Component{
+export default class RegisterAccount extends Component{
 
     render(){
         return(
@@ -15,7 +15,7 @@ export default class Login extends Component{
                         <View style={styles.logoContainer}>
                             <View style={styles.logoContainer}>
                                 <Text style={styles.title}>HapoOCR</Text>
-                                <Text style={styles.detail}>アカウント情報を入力してください.</Text>
+                                <Text style={styles.detail}>アカウント情報を入力してください。</Text>
                             </View>
                             <View style={styles.infoContainer}>
                                 <Text>メールアドレス</Text>
@@ -24,14 +24,8 @@ export default class Login extends Component{
                                 <Text>パスワード</Text>
                                 <TextInput style={styles.input} placeholder='Password'
                                 secureTextEntry={true} autoCorrect={false} ref='txtPassword'/>
-                                <Text >パスワードを忘れた方はこちら</Text>
-                                <Button style={styles.buttonLogin}  title='ログイン'/>
-                                <Text></Text>
-                                <Button color='#FFFFFF' style={styles.buttonClick} title='HapoOCRに登録'/>
-                                <Button title='利用ガイド'/>
-                            </View>
-                            <View>
-                                
+                                <Button style={styles.buttonLogin}  title='登録'/>
+                                <Text style={styles.footerText} >ログイン画面へ戻る</Text>
                             </View>
                         </View>    
                     </TouchableWithoutFeedback>
@@ -48,10 +42,11 @@ const styles = StyleSheet.create({
     },
     logoContainer:{
         alignItems:'center',
-        justifyContent:'center',
+        top: 50,
         flex: 1,
     },
     title:{
+        margin: 20,
         fontSize:40,
         fontWeight:'bold',
         color: '#0076EC',
@@ -69,6 +64,8 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         padding: 20,
+        alignContent:'center',
+        top: 170,
         // backgroundColor:'red',
     },
     input:{
@@ -87,15 +84,13 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         paddingTop: 10,
     },
-    buttonClick:{
-        borderBottomColor: '#000000',
-        borderBottomWidth: 0.7,
-        marginBottom: 5,
-        color:'#0076EC',
-        borderWidth: 0.5,
-        borderColor: '#0076EC'
+    footerText:{
+        marginTop: 30,
+        textAlign: "center",
+        fontSize: 18,
+        fontWeight:'bold',
+        color:'#0076EC'
     }
-
 
 
 })

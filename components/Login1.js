@@ -4,7 +4,7 @@ import {StyleSheet, Text, View,TextInput, SafeAreaView,
      StatusBar,Button} from 'react-native';
 
     
-export default class Login extends Component{
+export default class Login1 extends Component{
 
     render(){
         return(
@@ -15,23 +15,11 @@ export default class Login extends Component{
                         <View style={styles.logoContainer}>
                             <View style={styles.logoContainer}>
                                 <Text style={styles.title}>HapoOCR</Text>
-                                <Text style={styles.detail}>アカウント情報を入力してください.</Text>
                             </View>
                             <View style={styles.infoContainer}>
-                                <Text>メールアドレス</Text>
-                                <TextInput style={styles.input} placeholder='Abc@example.com'
-                                keyboardType='email-address' autoCorrect={false} ref='txtEmail'/>
-                                <Text>パスワード</Text>
-                                <TextInput style={styles.input} placeholder='Password'
-                                secureTextEntry={true} autoCorrect={false} ref='txtPassword'/>
-                                <Text >パスワードを忘れた方はこちら</Text>
-                                <Button style={styles.buttonLogin}  title='ログイン'/>
-                                <Text></Text>
-                                <Button color='#FFFFFF' style={styles.buttonClick} title='HapoOCRに登録'/>
-                                <Button title='利用ガイド'/>
-                            </View>
-                            <View>
-                                
+                                <Text style={styles.footerText}>登録完了しました.</Text>
+                                <Text style={styles.footerText}>ありがとうございました。</Text>
+                                <Button style={styles.buttonLogin}  title='登録'/>
                             </View>
                         </View>    
                     </TouchableWithoutFeedback>
@@ -48,10 +36,11 @@ const styles = StyleSheet.create({
     },
     logoContainer:{
         alignItems:'center',
-        justifyContent:'center',
+        top: 50,
         flex: 1,
     },
     title:{
+        margin: 20,
         fontSize:40,
         fontWeight:'bold',
         color: '#0076EC',
@@ -69,16 +58,9 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         padding: 20,
+        alignContent:'center',
+        top: 170,
         // backgroundColor:'red',
-    },
-    input:{
-        height: 40,
-        borderColor:'#000000',
-        borderWidth: 0.5,
-        backgroundColor:'rgba(255,255,255,0.2)',
-        paddingHorizontal: 10,
-        marginTop: 2,
-        marginBottom: 10,
     },
     buttonLogin:{
         backgroundColor:'#0076EC',
@@ -87,15 +69,13 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         paddingTop: 10,
     },
-    buttonClick:{
-        borderBottomColor: '#000000',
-        borderBottomWidth: 0.7,
+    footerText:{
+        margin: 5,
         marginBottom: 5,
-        color:'#0076EC',
-        borderWidth: 0.5,
-        borderColor: '#0076EC'
+        textAlign: "center",
+        fontSize: 18,
+        fontWeight:'bold',
     }
-
 
 
 })
