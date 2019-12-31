@@ -3,7 +3,7 @@ import {StyleSheet, Text, View,TextInput, SafeAreaView,
     KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard,Image,
      StatusBar,Button} from 'react-native';
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
-import {DropdownMenu} from 'react-native-dropdown-menu'
+import {DropdownMenu} from 'react-native-dropdown-menu';
 export default class DetailScreen1 extends Component{
     render(){
         return(
@@ -16,7 +16,7 @@ export default class DetailScreen1 extends Component{
                             <Text style={styles.textHeader}>詳 細</Text>
                         </View>
                         <View>
-                            <Text>削除</Text>
+                            <Text style={styles.content}>削除</Text>
                             <Image style={styles.image} source={{uri:"https://congngheviet.com/wp-content/uploads/2019/10/Joker-2019-Niko-Tanvernise8.jpeg"}}></Image>
                             <Text style={styles.content}>"私は今日いやしくもその留学方というもののためをすむですある。ことに十一月で建設共はどうかその周旋ででまでを叱らから得るべきをは話考えうないながら、
                                 まだにはしたたますなけれ。義務をしますのはどうも一遍にもしなですべき。
